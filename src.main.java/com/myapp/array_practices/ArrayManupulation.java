@@ -1,10 +1,7 @@
 package com.myapp.array_practices;
 
-import org.apache.logging.log4j.Logger;
-
-import com.myapp.log.test.Log4j2HelloWorldExample;
-
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ArrayManupulation {
 
@@ -13,7 +10,7 @@ public class ArrayManupulation {
 	private static final Logger LOGGER = LogManager.getLogger(ArrayManupulation.class.getName());
 
 	public static void main(String[] args) {
-		LOGGER.trace("Entering application.");
+		LOGGER.info("Entering application. ArrayManupulation main method...........");
 		int[] arr1 = { 10, 20, 30 };
 		int[] arr2 = { 70, 80, 10, 30, 60, 50, 30, 30 };
 
@@ -25,16 +22,16 @@ public class ArrayManupulation {
 //        for(int i=0;i<arr3.length;i++) {
 //        	System.out.println(arr3[i]);
 //        }
-		int[] tempSorted = findDuplicateElementSortedArray(duplicateElement1);
-		for (int i = 0; i < tempSorted.length; i++) {
-			System.out.println(tempSorted[i]);
-		}
-
-//		int[] tempUnSorted = findDuplicateElementUnSortedArray(duplicateElement2);
-//		for (int i = 0; i < tempUnSorted.length; i++) {
-//			System.out.println(tempUnSorted[i]);
+//		int[] tempSorted = findDuplicateElementSortedArray(duplicateElement1);
+//		for (int i = 0; i < tempSorted.length; i++) {
+//			System.out.println(tempSorted[i]);
 //		}
-		//LOGGER.trace("Exiting application.");
+
+		int[] tempUnSorted = findDuplicateElementUnSortedArray(duplicateElement2);
+		for (int i = 0; i < tempUnSorted.length; i++) {
+			System.out.println(tempUnSorted[i]);
+		}
+		LOGGER.info("Exiting application.ArrayManupulation main method...............");
 	}
 
 	public static int[] mergeTwoArray(int[] arr1, int[] arr2) {

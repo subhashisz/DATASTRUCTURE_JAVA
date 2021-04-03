@@ -1,11 +1,2 @@
-2021-04-03 02:54:27.257 ERROR [main] [com.myapp.log.test.Log4j2HelloWorldExample] [main] [com.myapp.log.test.Log4j2HelloWorldExample.main(Log4j2HelloWorldExample.java:12)] - Error Message Logged !!!
-2021-04-03 02:56:23.237 ERROR [main] [com.myapp.log.test.Log4j2HelloWorldExample] [main] [com.myapp.log.test.Log4j2HelloWorldExample.main(Log4j2HelloWorldExample.java:12)] - Error Message Logged !!!
-2021-04-03 02:58:29.707 ERROR [main] [com.myapp.log.test.Log4j2HelloWorldExample] [main] [com.myapp.log.test.Log4j2HelloWorldExample.main(Log4j2HelloWorldExample.java:12)] - Error Message Logged !!!
-2021-04-03 03:00:49.197 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
-2021-04-03 03:00:49.243 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
-2021-04-03 03:00:49.243 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
-2021-04-03 03:00:49.244 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
-2021-04-03 03:00:49.245 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
-2021-04-03 03:00:49.246 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
-2021-04-03 03:00:49.247 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
-2021-04-03 03:00:49.249 ERROR [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:35)] - Didn't do it.
+2021-04-03 11:27:15.090 INFO [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:16)] - Entering application. ArrayManupulation main method...........
+2021-04-03 11:27:15.095 INFO [main] [com.myapp.array_practices.ArrayManupulation] [main] [com.myapp.array_practices.ArrayManupulation.main(ArrayManupulation.java:37)] - Exiting application.ArrayManupulation main method...............
