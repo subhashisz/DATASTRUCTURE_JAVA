@@ -1,8 +1,14 @@
 package com.myapp.array_practices;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * @author SUBHASHIS
+ */
 public class ArrayManupulation {
 
 	// Define a static logger variable so that it references the
@@ -10,30 +16,44 @@ public class ArrayManupulation {
 	private static final Logger LOGGER = LogManager.getLogger(ArrayManupulation.class.getName());
 
 	public static void main(String[] args) {
-		LOGGER.info("Entering application. ArrayManupulation main method...........");
+		// LOGGER.info("Entering application. ArrayManupulation main
+		// method...........");
 		int[] arr1 = { 10, 20, 30 };
 		int[] arr2 = { 70, 80, 10, 30, 60, 50, 30, 30 };
 
-		int[] duplicateElement1 = { 10, 20, 30, 30, 50, 60, 12, 23, 45, 45 };
-		int[] duplicateElement2 = { 70, 80, 10, 30, 60, 50, 30, 30 };
-
-		// System.out.println(removeElementFromArray(arr2, 30));
-//		int []arr3=mergeTwoArray(arr1, arr2);
-//        for(int i=0;i<arr3.length;i++) {
-//        	System.out.println(arr3[i]);
-//        }
-//		int[] tempSorted = findDuplicateElementSortedArray(duplicateElement1);
-//		for (int i = 0; i < tempSorted.length; i++) {
-//			System.out.println(tempSorted[i]);
-//		}
-
-		int[] tempUnSorted = findDuplicateElementUnSortedArray(duplicateElement2);
-		for (int i = 0; i < tempUnSorted.length; i++) {
-			System.out.println(tempUnSorted[i]);
+		for (Integer nos : commonElementsInTwoArraysForLoop(arr1, arr2)) {
+			System.out.print(nos + " ");
 		}
-		LOGGER.info("Exiting application.ArrayManupulation main method...............");
+
+		// LOGGER.info("Exiting application.ArrayManupulation main
+		// method...............");
 	}
 
+	public static List<Integer> commonElementsInTwoArraysForLoop(int[] arr1, int[] arr2) {
+		List<Integer> tempList = new ArrayList<Integer>();
+		for (int i = 0; i < arr1.length; i++) {
+			for (int j = 0; j < arr2.length; j++) {
+				if (arr1[i] == arr2[j]) {
+					tempList.add(arr1[i]);
+					break;
+				}
+			}
+		}
+
+		return tempList;
+
+	}
+
+	public static List<Integer> commonElementsInTwoArraysHashMap(int[] arr1, int[] arr2) {
+		List<Integer> tempList = new ArrayList<Integer>();
+
+		return tempList;
+
+	}
+
+	/*
+	 * complete
+	 */
 	public static int[] mergeTwoArray(int[] arr1, int[] arr2) {
 		int finalLength = arr1.length + arr2.length;
 		int[] arr3 = new int[finalLength];
@@ -46,8 +66,10 @@ public class ArrayManupulation {
 		return arr3;
 	}
 
+	/*
+	 * complete
+	 */
 	public static int[] insertElementToArray(int[] arr, int element, int position) {
-		boolean flag = Boolean.FALSE;
 		for (int i = arr.length - 1; i < position - 1; i--) {
 			arr[i] = arr[i - 1];
 		}
@@ -55,6 +77,9 @@ public class ArrayManupulation {
 		return arr;
 	}
 
+	/*
+	 * complete
+	 */
 	public static boolean removeElementFromArray(int[] arr, int element) {
 		boolean flag = Boolean.FALSE;
 		for (int i = 0; i < arr.length; i++) {
@@ -72,7 +97,10 @@ public class ArrayManupulation {
 		return flag;
 	}
 
-	public static int[] findDuplicateElementSortedArray(int[] arr) {
+	/*
+	 * complete
+	 */
+	public static int[] removeDuplicateElementSortedArray(int[] arr) {
 		int[] duplicateElements = new int[arr.length];
 		int j = 0;
 		for (int i = 0; i < arr.length - 1; i++) {
@@ -82,23 +110,34 @@ public class ArrayManupulation {
 			}
 		}
 		duplicateElements[j] = arr[arr.length - 1];
-
 		return duplicateElements;
 	}
 
-	public static int[] findDuplicateElementUnSortedArray(int[] arr) {
+	/*
+	 * incomplete
+	 */
+	public static int[] removeDuplicateElementUnSortedArray(int[] arr) {
 		int[] duplicateElements = new int[arr.length];
-
+		int j = 0;
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int k = 1; k < arr.length; k++)
+				if (arr[i] != arr[k])
+					;
+			duplicateElements[j] = arr[i];
+			j++;
+		}
+		duplicateElements[j] = arr[arr.length - 1];
 		return duplicateElements;
+
 	}
 
-	public static int[] removeDuplicateElementSortedArray(int[] arr) {
+	public static int[] findDuplicateElementSortedArray(int[] arr) {
 		int[] finalElements = new int[arr.length];
 
 		return finalElements;
 	}
 
-	public static int[] removeDuplicateElementUnSortedArray(int[] arr) {
+	public static int[] findDuplicateElementUnSortedArray(int[] arr) {
 		int[] finalElements = new int[arr.length];
 
 		return finalElements;
